@@ -1,0 +1,414 @@
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+.header {
+  background: var(--card-bg);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px var(--card-shadow);
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  color: var(--text-primary);
+  margin-bottom: 10px;
+}
+
+.header p {
+  color: var(--text-light);
+  font-size: 1.1rem;
+}
+
+.headerButtons {
+  display: flex;
+  gap: 15px;
+}
+
+.dashboardBtn {
+  background: linear-gradient(135deg, #007aff 0%, #0051d5 100%);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+}
+
+.dashboardBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 122, 255, 0.3);
+}
+
+.logoutBtn {
+  background: linear-gradient(135deg, #f56565 0%, #c53030 100%);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+}
+
+.logoutBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(245, 101, 101, 0.3);
+}
+
+.statsSection {
+  background: var(--card-bg);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px var(--card-shadow);
+  margin-bottom: 30px;
+}
+
+.statsSection h2 {
+  color: var(--text-primary);
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.statCard {
+  background: var(--bg-secondary);
+  border-radius: 15px;
+  padding: 25px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  transition: all 0.3s ease;
+  border: 2px solid var(--border-color);
+}
+
+.statCard:hover {
+  transform: translateY(-5px);
+  border-color: #007aff;
+}
+
+.statIcon {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #007aff 0%, #0051d5 100%);
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  color: white;
+}
+
+.statContent {
+  flex: 1;
+}
+
+.statNumber {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.statLabel {
+  font-size: 0.9rem;
+  color: var(--text-light);
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.userManagement {
+  background: var(--card-bg);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px var(--card-shadow);
+}
+
+.sectionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.sectionHeader h2 {
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.addBtn {
+  background: linear-gradient(135deg, #48bb78 0%, #38a169 100%);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+}
+
+.addBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(72, 187, 120, 0.3);
+}
+
+.userForm {
+  background: var(--bg-secondary);
+  padding: 25px;
+  border-radius: 15px;
+  margin-bottom: 30px;
+  border: 2px solid var(--border-color);
+}
+
+.formRow {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.formGroup {
+  position: relative;
+}
+
+.formGroup input,
+.formGroup select {
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px solid var(--input-border);
+  border-radius: 10px;
+  font-size: 1rem;
+  background: var(--input-bg);
+  color: var(--text-primary);
+  transition: all 0.3s ease;
+}
+
+.formGroup input:focus,
+.formGroup select:focus {
+  outline: none;
+  border-color: #007aff;
+  box-shadow: 0 0 0 3px rgba(0, 122, 255, 0.1);
+}
+
+.submitBtn {
+  background: linear-gradient(135deg, #007aff 0%, #0051d5 100%);
+  color: white;
+  padding: 12px 32px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+}
+
+.submitBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 122, 255, 0.3);
+}
+
+.tableContainer {
+  overflow-x: auto;
+  margin-top: 20px;
+}
+
+.usersTable {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--card-bg);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.usersTable thead {
+  background: var(--table-header-bg);
+}
+
+.usersTable th {
+  padding: 16px;
+  text-align: left;
+  font-weight: 600;
+  color: var(--text-primary);
+  border-bottom: 2px solid var(--border-color);
+}
+
+.usersTable td {
+  padding: 16px;
+  border-bottom: 1px solid var(--border-color);
+  color: var(--text-primary);
+}
+
+.usersTable tr:hover {
+  background: var(--table-row-hover);
+}
+
+.roleBadge {
+  padding: 6px 12px;
+  border-radius: 15px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.roleBadge.admin {
+  background: linear-gradient(135deg, #fed7d7, #feb2b2);
+  color: #c53030;
+}
+
+.roleBadge.mudur {
+  background: linear-gradient(135deg, #faf089, #f6e05e);
+  color: #744210;
+}
+
+.roleBadge.user {
+  background: linear-gradient(135deg, #bee3f8, #90cdf4);
+  color: #2c5282;
+}
+
+.deleteBtn {
+  background: linear-gradient(135deg, #f56565 0%, #c53030 100%);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.deleteBtn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(245, 101, 101, 0.3);
+}
+
+.deleteBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .headerButtons {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .formRow {
+    grid-template-columns: 1fr;
+  }
+
+  .tableContainer {
+    overflow-x: scroll;
+  }
+}
+
+/* Dark Theme Support */
+[data-theme='dark'] .container {
+  background-color: transparent;
+}
+
+[data-theme='dark'] .header,
+[data-theme='dark'] .statsSection,
+[data-theme='dark'] .userManagement {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+[data-theme='dark'] .statCard,
+[data-theme='dark'] .userForm {
+  background: rgba(255, 255, 255, 0.03);
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+[data-theme='dark'] .statCard:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(0, 122, 255, 0.5);
+}
+
+[data-theme='dark'] .usersTable {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+[data-theme='dark'] .usersTable thead {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+[data-theme='dark'] .usersTable tr:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+[data-theme='dark'] .usersTable th,
+[data-theme='dark'] .usersTable td {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Dark Mode - iOS Style Blue */
+[data-theme='dark'] .dashboardBtn {
+  background: linear-gradient(135deg, #0a84ff 0%, #0066cc 100%);
+}
+
+[data-theme='dark'] .dashboardBtn:hover {
+  box-shadow: 0 8px 25px rgba(10, 132, 255, 0.3);
+}
+
+[data-theme='dark'] .statIcon {
+  background: linear-gradient(135deg, #0a84ff 0%, #0066cc 100%);
+}
+
+[data-theme='dark'] .submitBtn {
+  background: linear-gradient(135deg, #0a84ff 0%, #0066cc 100%);
+}
+
+[data-theme='dark'] .submitBtn:hover {
+  box-shadow: 0 8px 25px rgba(10, 132, 255, 0.3);
+}
+
+[data-theme='dark'] .roleBadge.admin {
+  background: linear-gradient(135deg, rgba(254, 215, 215, 0.2), rgba(254, 178, 178, 0.2));
+  color: #fc8181;
+}
+
+[data-theme='dark'] .roleBadge.mudur {
+  background: linear-gradient(135deg, rgba(250, 240, 137, 0.2), rgba(246, 224, 94, 0.2));
+  color: #f6e05e;
+}
+
+[data-theme='dark'] .roleBadge.user {
+  background: linear-gradient(135deg, rgba(190, 227, 248, 0.2), rgba(144, 205, 244, 0.2));
+  color: #90cdf4;
+}

@@ -1,0 +1,1078 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--ios-spacing-lg);
+  min-height: 100vh;
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding: var(--ios-spacing-2xl);
+  }
+}
+
+.header {
+  background: var(--card-bg);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  padding: 24px;
+  border-radius: var(--ios-radius-xl);
+  box-shadow: var(--ios-shadow-md);
+  margin-bottom: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 0.5px solid var(--ios-separator);
+}
+
+.header h1 {
+  font-size: 28px;
+  line-height: 34px;
+  font-weight: 700;
+  letter-spacing: 0.364px;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+
+.header p {
+  color: var(--ios-label-secondary);
+  font-size: 17px;
+  line-height: 22px;
+  letter-spacing: -0.408px;
+}
+
+.headerButtons {
+  display: flex;
+  gap: 12px;
+}
+
+.profileBtn, .adminBtn, .logoutBtn {
+  padding: 10px 20px;
+  border-radius: var(--ios-radius-md);
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: all var(--ios-timing-fast) var(--ios-easing-standard);
+  color: white;
+  text-decoration: none;
+  min-height: 36px;
+  box-shadow: var(--ios-shadow-sm);
+}
+
+.profileBtn {
+  background: var(--ios-blue);
+}
+
+.adminBtn {
+  background: var(--ios-orange);
+}
+
+.logoutBtn {
+  background: var(--ios-red);
+}
+
+.profileBtn:hover, .adminBtn:hover, .logoutBtn:hover {
+  opacity: 0.9;
+  box-shadow: var(--ios-shadow-md);
+}
+
+.profileBtn:active, .adminBtn:active, .logoutBtn:active {
+  transform: scale(0.95);
+  opacity: 0.8;
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--ios-spacing-lg);
+  margin-bottom: var(--ios-spacing-3xl);
+}
+
+.statCard {
+  background: var(--card-bg);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border-radius: var(--ios-radius-xl);
+  padding: 20px;
+  box-shadow: var(--ios-shadow-md);
+  border: 0.5px solid var(--ios-separator);
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  transition: all var(--ios-timing-fast) var(--ios-easing-standard);
+}
+
+.statCard:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--ios-shadow-lg);
+}
+
+.statCard:active {
+  transform: scale(0.98);
+}
+
+.statIcon {
+  width: 52px;
+  height: 52px;
+  background: var(--ios-blue);
+  border-radius: var(--ios-radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  color: white;
+}
+
+.statContent {
+  flex: 1;
+}
+
+.statNumber {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.statLabel {
+  font-size: 1rem;
+  color: var(--text-light);
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.tasksSection {
+  background: var(--card-bg);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  padding: 24px;
+  border-radius: var(--ios-radius-xl);
+  box-shadow: var(--ios-shadow-md);
+  border: 0.5px solid var(--ios-separator);
+}
+
+.tasksSection h2 {
+  color: var(--text-primary);
+  font-size: 22px;
+  line-height: 28px;
+  font-weight: 700;
+  letter-spacing: 0.352px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.emptyState {
+  text-align: center;
+  padding: 60px 30px;
+  color: var(--text-light);
+}
+
+.emptyState i {
+  font-size: 5rem;
+  margin-bottom: 25px;
+  opacity: 0.3;
+}
+
+.emptyState h3 {
+  font-size: 1.6rem;
+  margin-bottom: 15px;
+  color: var(--text-primary);
+}
+
+.taskList {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.taskItem {
+  background: var(--ios-bg-tertiary);
+  border: 0.5px solid var(--ios-separator);
+  border-radius: var(--ios-radius-lg);
+  padding: 16px;
+  transition: all var(--ios-timing-fast) var(--ios-easing-standard);
+}
+
+.taskItem:hover {
+  background: var(--ios-fill-tertiary);
+  transform: translateY(-2px);
+  box-shadow: var(--ios-shadow-md);
+}
+
+.taskItem:active {
+  transform: scale(0.98);
+}
+
+.taskItem.completed {
+  opacity: 0.6;
+  background: var(--ios-fill-secondary);
+}
+
+.taskHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.taskHeader h3 {
+  color: var(--text-primary);
+  font-size: 17px;
+  line-height: 22px;
+  font-weight: 600;
+  letter-spacing: -0.408px;
+}
+
+.taskType {
+  background: var(--ios-blue);
+  color: white;
+  padding: 4px 12px;
+  border-radius: var(--ios-radius-full);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: -0.078px;
+}
+
+/* Task Type Colors - Light Mode */
+.taskType[data-type="Ödev"],
+.taskType[data-type="ödev"] {
+  background: #007aff;
+}
+
+.taskType[data-type="Tez"],
+.taskType[data-type="tez"] {
+  background: #5856d6;
+}
+
+.taskType[data-type="Sınav"],
+.taskType[data-type="sınav"] {
+  background: #ff9500;
+}
+
+.taskType[data-type="Proje"],
+.taskType[data-type="proje"] {
+  background: #34c759;
+}
+
+/* Task Type Colors - Dark Mode */
+[data-theme='dark'] .taskType[data-type="Ödev"],
+[data-theme='dark'] .taskType[data-type="ödev"] {
+  background: #0a84ff;
+}
+
+[data-theme='dark'] .taskType[data-type="Tez"],
+[data-theme='dark'] .taskType[data-type="tez"] {
+  background: #5e5ce6;
+}
+
+[data-theme='dark'] .taskType[data-type="Sınav"],
+[data-theme='dark'] .taskType[data-type="sınav"] {
+  background: #ff9f0a;
+}
+
+[data-theme='dark'] .taskType[data-type="Proje"],
+[data-theme='dark'] .taskType[data-type="proje"] {
+  background: #30d158;
+}
+
+.taskDescription {
+  color: var(--text-light);
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.taskMeta {
+  display: flex;
+  gap: 20px;
+  font-size: 0.95rem;
+  color: var(--text-light);
+}
+
+.taskMeta span {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.addTaskSection {
+  background: var(--card-bg);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  padding: 24px;
+  border-radius: var(--ios-radius-xl);
+  box-shadow: var(--ios-shadow-md);
+  border: 0.5px solid var(--ios-separator);
+  margin-bottom: 24px;
+}
+
+.sectionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.sectionHeader h2 {
+  color: var(--text-primary);
+  font-size: 22px;
+  line-height: 28px;
+  font-weight: 700;
+  letter-spacing: 0.352px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.toggleBtn {
+  background: var(--ios-green);
+  color: white;
+  padding: 10px 20px;
+  border-radius: var(--ios-radius-md);
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 36px;
+  transition: all var(--ios-timing-fast) var(--ios-easing-standard);
+  box-shadow: var(--ios-shadow-sm);
+}
+
+.toggleBtn:hover {
+  opacity: 0.9;
+  box-shadow: var(--ios-shadow-md);
+}
+
+.toggleBtn:active {
+  transform: scale(0.95);
+  opacity: 0.8;
+}
+
+.taskForm {
+  background: var(--bg-secondary);
+  padding: 25px;
+  border-radius: 15px;
+  border: 2px solid var(--border-color);
+}
+
+.formRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.formGroup {
+  position: relative;
+}
+
+.formGroup input,
+.formGroup select,
+.formGroup textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border: none;
+  border-radius: var(--ios-radius-md);
+  font-size: 17px;
+  background: var(--ios-fill-tertiary);
+  color: var(--text-primary);
+  transition: all var(--ios-timing-fast) var(--ios-easing-standard);
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif;
+  letter-spacing: -0.408px;
+}
+
+.formGroup input::placeholder,
+.formGroup textarea::placeholder {
+  color: var(--ios-label-tertiary);
+}
+
+.formGroup input:focus,
+.formGroup select:focus,
+.formGroup textarea:focus {
+  outline: none;
+  background: var(--ios-fill-secondary);
+  box-shadow: 0 0 0 2px var(--ios-blue);
+}
+
+.formGroup textarea {
+  resize: vertical;
+}
+
+.submitBtn {
+  background: var(--ios-blue);
+  color: white;
+  padding: 12px 24px;
+  border-radius: var(--ios-radius-lg);
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 17px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  transition: all var(--ios-timing-fast) var(--ios-easing-standard);
+  box-shadow: var(--ios-shadow-sm);
+}
+
+.submitBtn:hover {
+  opacity: 0.9;
+  box-shadow: var(--ios-shadow-md);
+}
+
+.submitBtn:active {
+  transform: scale(0.95);
+  opacity: 0.8;
+}
+
+.taskHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 15px;
+}
+
+.taskActions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.taskCheckbox {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+.deleteBtn {
+  background: var(--ios-red);
+  color: white;
+  padding: 8px 12px;
+  border-radius: var(--ios-radius-sm);
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  min-height: 32px;
+  transition: all var(--ios-timing-fast) var(--ios-easing-standard);
+  box-shadow: var(--ios-shadow-sm);
+}
+
+.deleteBtn:hover {
+  opacity: 0.9;
+}
+
+.deleteBtn:active {
+  transform: scale(0.95);
+  opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .headerButtons {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .formRow {
+    grid-template-columns: 1fr;
+  }
+
+  .statsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.countdownSection {
+  margin-bottom: var(--ios-spacing-2xl);
+}
+
+.notificationsSection {
+  margin-bottom: var(--ios-spacing-2xl);
+}
+
+.calendarSection, .notesSection {
+  background: var(--card-bg);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  padding: 24px;
+  border-radius: var(--ios-radius-xl);
+  box-shadow: var(--ios-shadow-md);
+  border: 0.5px solid var(--ios-separator);
+  margin-bottom: 24px;
+}
+
+.calendarSection h2, .notesSection h2 {
+  color: var(--text-primary);
+  font-size: 22px;
+  line-height: 28px;
+  font-weight: 700;
+  letter-spacing: 0.352px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.notesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.addNoteBtn {
+  background: var(--ios-green);
+  color: white;
+  padding: 10px 20px;
+  border-radius: var(--ios-radius-md);
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 36px;
+  transition: all var(--ios-timing-fast) var(--ios-easing-standard);
+  box-shadow: var(--ios-shadow-sm);
+}
+
+.addNoteBtn:hover {
+  opacity: 0.9;
+  box-shadow: var(--ios-shadow-md);
+}
+
+.addNoteBtn:active {
+  transform: scale(0.95);
+  opacity: 0.8;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--modal-overlay);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  z-index: 10000;
+  padding: 0;
+  animation: fadeIn var(--ios-timing-base) var(--ios-easing-standard);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.modalContent {
+  background: var(--modal-bg);
+  backdrop-filter: blur(30px) saturate(180%);
+  -webkit-backdrop-filter: blur(30px) saturate(180%);
+  border-radius: var(--ios-radius-2xl) var(--ios-radius-2xl) 0 0;
+  max-width: 600px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: var(--ios-shadow-xl);
+  animation: slideUp var(--ios-timing-base) var(--ios-easing-standard);
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.modalContent::before {
+  content: '';
+  display: block;
+  width: 36px;
+  height: 5px;
+  background: var(--ios-gray3);
+  border-radius: 3px;
+  margin: 12px auto 0;
+}
+
+.modalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 24px;
+  border-bottom: 0.5px solid var(--ios-separator);
+  color: var(--ios-label-primary);
+}
+
+.modalHeader h3 {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 20px;
+  line-height: 25px;
+  font-weight: 600;
+  letter-spacing: 0.38px;
+}
+
+.closeBtn {
+  background: var(--ios-fill-tertiary);
+  border: none;
+  color: var(--ios-label-primary);
+  width: 32px;
+  height: 32px;
+  border-radius: var(--ios-radius-full);
+  cursor: pointer;
+  font-size: 18px;
+  transition: all var(--ios-timing-fast) var(--ios-easing-standard);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.closeBtn:hover {
+  background: var(--ios-fill-secondary);
+}
+
+.closeBtn:active {
+  transform: scale(0.9);
+}
+
+.noteForm {
+  padding: 24px;
+}
+
+.noteForm .formGroup {
+  margin-bottom: 20px;
+}
+
+.noteForm .formGroup:last-of-type {
+  margin-bottom: 0;
+}
+
+.noteForm .formGroup label {
+  display: block;
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 600;
+  letter-spacing: -0.078px;
+  color: var(--ios-label-secondary);
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.noteForm .formGroup input {
+  font-size: 20px;
+  line-height: 25px;
+  font-weight: 600;
+  letter-spacing: 0.38px;
+  padding: 16px;
+}
+
+.noteForm .formGroup textarea {
+  font-size: 17px;
+  line-height: 22px;
+  letter-spacing: -0.408px;
+  padding: 16px;
+  min-height: 200px;
+}
+
+.modalActions {
+  display: flex;
+  gap: 15px;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+.cancelBtn {
+  background: transparent;
+  color: var(--ios-blue);
+  padding: 12px 24px;
+  border-radius: var(--ios-radius-lg);
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 17px;
+  min-height: 44px;
+  transition: all var(--ios-timing-fast) var(--ios-easing-standard);
+}
+
+.cancelBtn:hover {
+  opacity: 0.7;
+}
+
+.cancelBtn:active {
+  transform: scale(0.95);
+  opacity: 0.5;
+}
+
+.saveBtn {
+  background: var(--ios-blue);
+  color: white;
+  padding: 12px 24px;
+  border-radius: var(--ios-radius-lg);
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 17px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  transition: all var(--ios-timing-fast) var(--ios-easing-standard);
+  box-shadow: var(--ios-shadow-sm);
+}
+
+.saveBtn:hover {
+  opacity: 0.9;
+  box-shadow: var(--ios-shadow-md);
+}
+
+.saveBtn:active {
+  transform: scale(0.95);
+  opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+  .notesGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .modalContent {
+    max-width: 100%;
+    margin: 0;
+  }
+}
+
+/* Dosya Yükleme Stilleri */
+.taskFileSection {
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 2px solid var(--border-color);
+}
+
+.uploadBtn {
+  background: var(--ios-green);
+  color: white;
+  padding: 10px 20px;
+  border-radius: var(--ios-radius-md);
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 15px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 36px;
+  transition: all var(--ios-timing-fast) var(--ios-easing-standard);
+  box-shadow: var(--ios-shadow-sm);
+}
+
+.uploadBtn:hover {
+  opacity: 0.9;
+  box-shadow: var(--ios-shadow-md);
+}
+
+.uploadBtn:active {
+  transform: scale(0.95);
+  opacity: 0.8;
+}
+
+.uploadedFiles {
+  margin-top: 15px;
+  padding: 15px;
+  background: var(--bg-secondary);
+  border-radius: 12px;
+  border: 2px solid var(--border-color);
+}
+
+.uploadedFiles h4 {
+  color: var(--text-primary);
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1rem;
+}
+
+.fileList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.fileItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 15px;
+  background: var(--card-bg);
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  transition: all 0.3s ease;
+}
+
+.fileItem:hover {
+  border-color: #007aff;
+  transform: translateX(5px);
+}
+
+.fileItem i {
+  color: #007aff;
+  font-size: 1.2rem;
+}
+
+.fileName {
+  flex: 1;
+  color: var(--text-primary);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.fileName:hover {
+  color: #007aff;
+}
+
+.fileDate {
+  font-size: 0.85rem;
+  color: var(--text-light);
+}
+
+.taskNotes {
+  margin-top: 15px;
+  padding: 15px;
+  background: var(--bg-secondary);
+  border-radius: 12px;
+  border-left: 4px solid #007aff;
+}
+
+.taskNotes h4 {
+  color: var(--text-primary);
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1rem;
+}
+
+.taskNotes p {
+  color: var(--text-light);
+  line-height: 1.6;
+  white-space: pre-wrap;
+}
+
+.submittedInfo {
+  margin-top: 15px;
+  padding: 12px 15px;
+  background: linear-gradient(135deg, #f0fff4, #c6f6d5);
+  border-radius: 10px;
+  color: #22543d;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.submittedInfo i {
+  color: #38a169;
+}
+
+.submitForm {
+  padding: 24px;
+}
+
+.submitForm .formGroup {
+  margin-bottom: 20px;
+}
+
+.submitForm .formGroup:last-of-type {
+  margin-bottom: 0;
+}
+
+.submitForm label {
+  display: block;
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 600;
+  letter-spacing: -0.078px;
+  color: var(--ios-label-secondary);
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.submitForm textarea {
+  font-size: 17px;
+  line-height: 22px;
+  letter-spacing: -0.408px;
+  padding: 16px;
+  min-height: 120px;
+}
+
+.fileInput {
+  width: 100%;
+  padding: 16px;
+  border: 2px dashed var(--ios-separator);
+  border-radius: var(--ios-radius-md);
+  background: var(--ios-fill-tertiary);
+  color: var(--text-primary);
+  font-size: 15px;
+  cursor: pointer;
+  transition: all var(--ios-timing-fast) var(--ios-easing-standard);
+}
+
+.fileInput:hover {
+  border-color: var(--ios-blue);
+  background: var(--ios-fill-secondary);
+}
+
+.selectedFiles {
+  margin-top: 12px;
+  padding: 12px;
+  background: var(--ios-fill-quaternary);
+  border-radius: var(--ios-radius-md);
+  border: 0.5px solid var(--ios-separator);
+}
+
+.selectedFiles p {
+  color: var(--text-primary);
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.selectedFiles ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.selectedFiles li {
+  padding: 10px 12px;
+  background: var(--card-bg);
+  border-radius: var(--ios-radius-sm);
+  margin-bottom: 6px;
+  color: var(--ios-label-secondary);
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.selectedFiles li:last-child {
+  margin-bottom: 0;
+}
+
+.selectedFiles li i {
+  color: var(--ios-blue);
+}
+
+@media (max-width: 768px) {
+  .uploadBtn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .fileItem {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* Dark Theme Support */
+[data-theme='dark'] .container {
+  background-color: transparent;
+}
+
+[data-theme='dark'] .header,
+[data-theme='dark'] .statsSection,
+[data-theme='dark'] .tasksSection,
+[data-theme='dark'] .addTaskSection,
+[data-theme='dark'] .calendarSection,
+[data-theme='dark'] .notesSection {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+[data-theme='dark'] .statCard,
+[data-theme='dark'] .taskItem,
+[data-theme='dark'] .taskForm {
+  background: rgba(255, 255, 255, 0.03);
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+[data-theme='dark'] .taskItem:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+[data-theme='dark'] .modalContent {
+  background: rgba(0, 0, 0, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+[data-theme='dark'] .modal {
+  background: rgba(0, 0, 0, 0.85);
+}
+
+/* Dark Mode - iOS Style Blue */
+[data-theme='dark'] .statIcon {
+  background: linear-gradient(135deg, #0a84ff 0%, #0066cc 100%);
+}
+
+[data-theme='dark'] .submitBtn {
+  background: linear-gradient(135deg, #0a84ff 0%, #0066cc 100%);
+}
+
+[data-theme='dark'] .submitBtn:hover {
+  box-shadow: 0 0 0 2px #0a84ff;
+}
+
+[data-theme='dark'] .formGroup input:focus,
+[data-theme='dark'] .formGroup select:focus,
+[data-theme='dark'] .formGroup textarea:focus {
+  box-shadow: 0 0 0 2px #0a84ff;
+}
+
+[data-theme='dark'] .modalHeader {
+  background: linear-gradient(135deg, #0a84ff 0%, #0066cc 100%);
+}
+
+[data-theme='dark'] .saveBtn {
+  background: linear-gradient(135deg, #0a84ff 0%, #0066cc 100%);
+}
+
+[data-theme='dark'] .saveBtn:hover {
+  box-shadow: var(--ios-shadow-md);
+}
+
+[data-theme='dark'] .cancelBtn {
+  color: #0a84ff;
+}
+
+[data-theme='dark'] .cancelBtn:hover {
+  opacity: 0.7;
+}

@@ -1,0 +1,200 @@
+.calendar {
+  background: var(--card-bg);
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 15px var(--card-shadow);
+}
+
+.calendarHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.calendarTitle {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.navBtn {
+  background: var(--bg-secondary);
+  border: 2px solid var(--border-color);
+  color: var(--text-primary);
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navBtn:hover {
+  background: #667eea;
+  color: white;
+  border-color: #667eea;
+}
+
+.viewToggle {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  justify-content: center;
+}
+
+.viewBtn {
+  padding: 8px 20px;
+  border: 2px solid var(--border-color);
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.viewBtn.active {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-color: transparent;
+}
+
+.calendarGrid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+}
+
+.dayHeader {
+  text-align: center;
+  font-weight: 600;
+  color: var(--text-secondary);
+  padding: 10px;
+  font-size: 0.9rem;
+}
+
+.calendarDay {
+  min-height: 100px;
+  padding: 8px;
+  background: var(--bg-secondary);
+  border: 2px solid var(--border-color);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.calendarDay:hover {
+  border-color: #667eea;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px var(--card-shadow);
+}
+
+.calendarDay.today {
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
+  border-color: #667eea;
+}
+
+.calendarDay.otherMonth {
+  opacity: 0.4;
+}
+
+.calendarDay.urgent {
+  background: linear-gradient(135deg, rgba(245, 101, 101, 0.1), rgba(197, 48, 48, 0.1));
+  border-color: #f56565;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(245, 101, 101, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 0 8px rgba(245, 101, 101, 0);
+  }
+}
+
+.dayNumber {
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 5px;
+  font-size: 0.9rem;
+}
+
+.dayEvents {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.event {
+  padding: 4px 6px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.event.task {
+  background: linear-gradient(135deg, #bee3f8, #90cdf4);
+  color: #2c5282;
+}
+
+.event.note {
+  background: linear-gradient(135deg, #faf089, #f6e05e);
+  color: #744210;
+}
+
+.event.event {
+  background: linear-gradient(135deg, #c6f6d5, #9ae6b4);
+  color: #22543d;
+}
+
+.urgentEvent {
+  background: linear-gradient(135deg, #fed7d7, #feb2b2) !important;
+  color: #c53030 !important;
+  font-weight: 700;
+  animation: blink 1.5s infinite;
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+.urgentEvent i {
+  margin-right: 4px;
+}
+
+.moreEvents {
+  font-size: 0.7rem;
+  color: var(--text-light);
+  font-weight: 600;
+  text-align: center;
+  margin-top: 4px;
+}
+
+@media (max-width: 768px) {
+  .calendarDay {
+    min-height: 80px;
+    padding: 6px;
+  }
+
+  .dayNumber {
+    font-size: 0.8rem;
+  }
+
+  .event {
+    font-size: 0.65rem;
+    padding: 3px 4px;
+  }
+}

@@ -1,0 +1,190 @@
+.notificationPanel {
+  background: var(--card-bg);
+  border-radius: 15px;
+  box-shadow: 0 4px 15px var(--card-shadow);
+  overflow: hidden;
+}
+
+.header {
+  padding: 20px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.header h3 {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.3rem;
+}
+
+.badge {
+  background: #f56565;
+  color: white;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.notificationList {
+  max-height: 500px;
+  overflow-y: auto;
+}
+
+.emptyState {
+  text-align: center;
+  padding: 60px 20px;
+  color: var(--text-light);
+}
+
+.emptyState i {
+  font-size: 4rem;
+  margin-bottom: 15px;
+  opacity: 0.3;
+}
+
+.notificationItem {
+  display: flex;
+  gap: 15px;
+  padding: 20px;
+  border-bottom: 1px solid var(--border-color);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.notificationItem:hover {
+  background: var(--bg-secondary);
+}
+
+.notificationItem.unread {
+  background: rgba(102, 126, 234, 0.05);
+  border-left: 4px solid #667eea;
+}
+
+.notificationItem.blue {
+  border-left-color: #4299e1;
+}
+
+.notificationItem.green {
+  border-left-color: #48bb78;
+}
+
+.notificationItem.red {
+  border-left-color: #f56565;
+}
+
+.notificationItem.orange {
+  border-left-color: #ed8936;
+}
+
+.notificationIcon {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  flex-shrink: 0;
+}
+
+.blue .notificationIcon {
+  background: linear-gradient(135deg, #bee3f8, #90cdf4);
+  color: #2c5282;
+}
+
+.green .notificationIcon {
+  background: linear-gradient(135deg, #c6f6d5, #9ae6b4);
+  color: #22543d;
+}
+
+.red .notificationIcon {
+  background: linear-gradient(135deg, #fed7d7, #feb2b2);
+  color: #c53030;
+}
+
+.orange .notificationIcon {
+  background: linear-gradient(135deg, #feebc8, #fbd38d);
+  color: #c05621;
+}
+
+.notificationContent {
+  flex: 1;
+}
+
+.notificationContent h4 {
+  margin: 0 0 5px 0;
+  color: var(--text-primary);
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.notificationContent p {
+  margin: 0 0 8px 0;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.time {
+  font-size: 0.75rem;
+  color: var(--text-light);
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.acceptBtn, .rejectBtn {
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.3s ease;
+}
+
+.acceptBtn {
+  background: linear-gradient(135deg, #48bb78 0%, #38a169 100%);
+  color: white;
+}
+
+.acceptBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(72, 187, 120, 0.3);
+}
+
+.rejectBtn {
+  background: linear-gradient(135deg, #f56565 0%, #c53030 100%);
+  color: white;
+}
+
+.rejectBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(245, 101, 101, 0.3);
+}
+
+.deleteBtn {
+  background: transparent;
+  border: none;
+  color: var(--text-light);
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  align-self: flex-start;
+}
+
+.deleteBtn:hover {
+  background: var(--bg-secondary);
+  color: #f56565;
+}

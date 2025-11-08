@@ -1,0 +1,96 @@
+.noteCard {
+  background: var(--card-bg);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border: 0.5px solid var(--ios-separator);
+  border-radius: var(--ios-radius-lg);
+  padding: 16px;
+  cursor: pointer;
+  transition: all var(--ios-timing-fast) var(--ios-easing-standard);
+  min-height: 180px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--ios-shadow-sm);
+}
+
+.noteCard:hover {
+  background: var(--ios-fill-tertiary);
+  transform: translateY(-2px);
+  box-shadow: var(--ios-shadow-md);
+}
+
+.noteCard:active {
+  transform: scale(0.98);
+}
+
+.noteHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 15px;
+  gap: 10px;
+}
+
+.noteTitle {
+  font-size: 17px;
+  line-height: 22px;
+  font-weight: 600;
+  letter-spacing: -0.408px;
+  color: var(--text-primary);
+  flex: 1;
+  word-break: break-word;
+}
+
+.deleteBtn {
+  background: var(--ios-red);
+  color: white;
+  border: none;
+  width: 28px;
+  height: 28px;
+  border-radius: var(--ios-radius-sm);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--ios-timing-fast) var(--ios-easing-standard);
+  flex-shrink: 0;
+  font-size: 14px;
+  box-shadow: var(--ios-shadow-sm);
+}
+
+.deleteBtn:hover {
+  opacity: 0.9;
+}
+
+.deleteBtn:active {
+  transform: scale(0.9);
+  opacity: 0.8;
+}
+
+.noteContent {
+  flex: 1;
+  color: var(--ios-label-secondary);
+  font-size: 15px;
+  line-height: 20px;
+  letter-spacing: -0.24px;
+  margin-bottom: 12px;
+  word-break: break-word;
+}
+
+.noteMeta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  line-height: 18px;
+  letter-spacing: -0.078px;
+  color: var(--ios-label-tertiary);
+  padding-top: 12px;
+  border-top: 0.5px solid var(--ios-separator);
+}
+
+.noteMeta span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}

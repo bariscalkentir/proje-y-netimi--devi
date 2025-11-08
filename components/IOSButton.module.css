@@ -1,0 +1,296 @@
+/* iOS Button System */
+
+/* Base Button Styles */
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: none;
+  cursor: pointer;
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', sans-serif;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all var(--ios-timing-fast) var(--ios-easing-standard);
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+}
+
+.button:active {
+  transform: scale(0.95);
+}
+
+.button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  transform: none !important;
+}
+
+/* Button Sizes */
+.small {
+  font-size: 15px;
+  line-height: 20px;
+  padding: 8px 16px;
+  border-radius: var(--ios-radius-md);
+  min-height: 32px;
+}
+
+.medium {
+  font-size: 17px;
+  line-height: 22px;
+  padding: 12px 24px;
+  border-radius: var(--ios-radius-lg);
+  min-height: 44px;
+}
+
+.large {
+  font-size: 17px;
+  line-height: 22px;
+  padding: 16px 32px;
+  border-radius: 14px;
+  min-height: 50px;
+}
+
+/* Filled Button Variant */
+.filled {
+  color: white;
+  box-shadow: var(--ios-shadow-sm);
+}
+
+.filled:hover:not(:disabled) {
+  opacity: 0.9;
+  box-shadow: var(--ios-shadow-md);
+}
+
+.filled:active:not(:disabled) {
+  opacity: 0.8;
+}
+
+/* Filled Button Colors */
+.filled.blue {
+  background: var(--ios-blue);
+}
+
+.filled.green {
+  background: var(--ios-green);
+}
+
+.filled.red {
+  background: var(--ios-red);
+}
+
+.filled.orange {
+  background: var(--ios-orange);
+}
+
+.filled.purple {
+  background: var(--ios-purple);
+}
+
+.filled.pink {
+  background: var(--ios-pink);
+}
+
+.filled.teal {
+  background: var(--ios-teal);
+}
+
+.filled.yellow {
+  background: var(--ios-yellow);
+  color: var(--ios-label-primary);
+}
+
+.filled.gray {
+  background: var(--ios-gray);
+}
+
+/* Tinted Button Variant */
+.tinted {
+  background: transparent;
+  position: relative;
+}
+
+.tinted::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  opacity: 0.15;
+  transition: opacity var(--ios-timing-fast) var(--ios-easing-standard);
+}
+
+.tinted:hover:not(:disabled)::before {
+  opacity: 0.2;
+}
+
+.tinted:active:not(:disabled)::before {
+  opacity: 0.25;
+}
+
+/* Tinted Button Colors */
+.tinted.blue {
+  color: var(--ios-blue);
+}
+
+.tinted.blue::before {
+  background: var(--ios-blue);
+}
+
+.tinted.green {
+  color: var(--ios-green);
+}
+
+.tinted.green::before {
+  background: var(--ios-green);
+}
+
+.tinted.red {
+  color: var(--ios-red);
+}
+
+.tinted.red::before {
+  background: var(--ios-red);
+}
+
+.tinted.orange {
+  color: var(--ios-orange);
+}
+
+.tinted.orange::before {
+  background: var(--ios-orange);
+}
+
+.tinted.purple {
+  color: var(--ios-purple);
+}
+
+.tinted.purple::before {
+  background: var(--ios-purple);
+}
+
+.tinted.pink {
+  color: var(--ios-pink);
+}
+
+.tinted.pink::before {
+  background: var(--ios-pink);
+}
+
+.tinted.teal {
+  color: var(--ios-teal);
+}
+
+.tinted.teal::before {
+  background: var(--ios-teal);
+}
+
+.tinted.yellow {
+  color: var(--ios-yellow);
+}
+
+.tinted.yellow::before {
+  background: var(--ios-yellow);
+}
+
+.tinted.gray {
+  color: var(--ios-gray);
+}
+
+.tinted.gray::before {
+  background: var(--ios-gray);
+}
+
+/* Plain Button Variant */
+.plain {
+  background: transparent;
+  padding: 8px 16px;
+}
+
+.plain:hover:not(:disabled) {
+  opacity: 0.7;
+}
+
+.plain:active:not(:disabled) {
+  opacity: 0.5;
+}
+
+/* Plain Button Colors */
+.plain.blue {
+  color: var(--ios-blue);
+}
+
+.plain.green {
+  color: var(--ios-green);
+}
+
+.plain.red {
+  color: var(--ios-red);
+}
+
+.plain.orange {
+  color: var(--ios-orange);
+}
+
+.plain.purple {
+  color: var(--ios-purple);
+}
+
+.plain.pink {
+  color: var(--ios-pink);
+}
+
+.plain.teal {
+  color: var(--ios-teal);
+}
+
+.plain.yellow {
+  color: var(--ios-yellow);
+}
+
+.plain.gray {
+  color: var(--ios-gray);
+}
+
+/* Loading State */
+.loading {
+  position: relative;
+  color: transparent !important;
+  pointer-events: none;
+}
+
+.loading::after {
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 50%;
+  left: 50%;
+  margin-left: -8px;
+  margin-top: -8px;
+  border: 2px solid currentColor;
+  border-radius: 50%;
+  border-top-color: transparent;
+  animation: spin 0.6s linear infinite;
+}
+
+.filled.loading::after {
+  border-color: white;
+  border-top-color: transparent;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Icon Styles */
+.icon {
+  display: inline-flex;
+  font-size: 1.2em;
+}
+
+/* Full Width Button */
+.fullWidth {
+  width: 100%;
+}

@@ -1,0 +1,177 @@
+.countdown {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 20px;
+  padding: 30px;
+  color: white;
+  box-shadow: 0 10px 40px rgba(102, 126, 234, 0.3);
+  transition: all 0.3s ease;
+}
+
+.countdown.urgent {
+  background: linear-gradient(135deg, #f56565 0%, #c53030 100%);
+  animation: urgentPulse 2s infinite;
+}
+
+@keyframes urgentPulse {
+  0%, 100% {
+    box-shadow: 0 10px 40px rgba(245, 101, 101, 0.5);
+  }
+  50% {
+    box-shadow: 0 10px 60px rgba(245, 101, 101, 0.8);
+  }
+}
+
+.taskInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.taskTitle {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.taskTitle i {
+  font-size: 1.5rem;
+}
+
+.taskType {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.countdownTitle {
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.countdownTimer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.timeUnit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 15px 20px;
+  border-radius: 15px;
+  min-width: 80px;
+  backdrop-filter: blur(10px);
+}
+
+.timeValue {
+  font-size: 2.5rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.timeLabel {
+  font-size: 0.85rem;
+  opacity: 0.9;
+  margin-top: 6px;
+  font-weight: 600;
+}
+
+.timeSeparator {
+  font-size: 2.5rem;
+  font-weight: 800;
+  opacity: 0.7;
+}
+
+.urgentWarning {
+  margin-top: 20px;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+.emptyState {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.emptyState i {
+  font-size: 4rem;
+  margin-bottom: 15px;
+  opacity: 0.9;
+}
+
+.emptyState p {
+  font-size: 1.2rem;
+  font-weight: 600;
+  opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+  .countdown {
+    padding: 20px;
+  }
+
+  .taskInfo {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .taskTitle {
+    font-size: 1.1rem;
+  }
+
+  .countdownTimer {
+    gap: 8px;
+  }
+
+  .timeUnit {
+    padding: 12px 15px;
+    min-width: 65px;
+  }
+
+  .timeValue {
+    font-size: 2rem;
+  }
+
+  .timeLabel {
+    font-size: 0.75rem;
+  }
+
+  .timeSeparator {
+    font-size: 2rem;
+  }
+}
